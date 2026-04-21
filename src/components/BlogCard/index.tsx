@@ -22,8 +22,8 @@ export const BlogCard = ({
   const getTagVariant = (cat: string) => {
     switch (cat) {
       case 'Tech': return 'dark'
-      case 'Log': return 'outline'
-      case 'Meta': return 'accent'
+      case 'Log':
+      case 'Meta': return 'outline'
       default: return 'default'
     }
   }
@@ -41,7 +41,7 @@ export const BlogCard = ({
             <Tag variant={getTagVariant(category)}>{category}</Tag>
           </div>
           <span className="font-mono text-[11px] text-lt-ghost uppercase tracking-widest">
-            RPT_{formattedIndex} · {date}
+            {`RPT_${formattedIndex}`} · {date}
           </span>
         </div>
 
