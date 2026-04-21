@@ -1,0 +1,39 @@
+{
+  "name": "@chongxi/cepato-ui",
+  "version": "0.1.0",
+  "description": "CEPATO-UI — Lone Trail inspired design system",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./preset": {
+      "import": "./src/tokens/preset.ts",
+      "require": "./src/tokens/preset.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src/tokens"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
