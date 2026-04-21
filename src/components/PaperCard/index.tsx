@@ -5,9 +5,15 @@ interface PaperCardProps {
   children: React.ReactNode
   className?: string
   watermark?: string
+  showStripe?: boolean
 }
 
-export const PaperCard = ({ children, className = '', watermark }: PaperCardProps) => {
+export const PaperCard = ({ 
+  children, 
+  className = '', 
+  watermark, 
+  showStripe = true 
+}: PaperCardProps) => {
   return (
     <div className={`relative w-full bg-lt-bg paper-texture shadow-2xl overflow-hidden ${className}`}>
       {watermark && (
@@ -22,7 +28,7 @@ export const PaperCard = ({ children, className = '', watermark }: PaperCardProp
         {children}
       </div>
 
-      <StripeFooter />
+      {showStripe && <StripeFooter />}
     </div>
   )
 }

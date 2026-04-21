@@ -7,7 +7,7 @@ interface TagProps {
 }
 
 export const Tag = ({ variant = 'default', children, className = '' }: TagProps) => {
-  const baseStyles = "px-2 py-0.5 text-[11px] font-mono font-bold rounded-sm uppercase tracking-widest transition-all duration-300 hover:scale-105 cursor-default inline-block"
+  const baseStyles = "px-2 py-0.5 text-[11px] font-mono font-bold rounded-sm uppercase tracking-widest transition-all duration-300 inline-block"
   
   const variants = {
     default: "bg-lt-border text-lt-ink",
